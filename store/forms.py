@@ -9,3 +9,12 @@ class UserRegisterForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
+
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        if commit:
+            user.save()
+            profile = Profile.objects.create(user=user)
+            profile.is_buyer = True
+            profile.save()
+        return user
