@@ -19,5 +19,14 @@ class Profile(models.Model):
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
+    """
+    Signal receiver to create a Profile instance whenever a new User instance is created.
+        sender (Model class): The model class that sent the signal (User in this case).
+        instance (User): The actual instance of the model being saved.
+        created (bool): A boolean indicating if a new record was created.
+        **kwargs: Additional keyword arguments.
+    Side Effects:
+        Creates a corresponding Profile instance for every new User instance.
+    """
     if created:
         Profile.objects.create(user=instance)
