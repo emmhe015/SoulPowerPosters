@@ -32,4 +32,10 @@ def create_user_profile(sender, instance, created, **kwargs):
         Profile.objects.create(user=instance)
 
 def save_user_profile(sender, instance, **kwargs):
+    """
+    Signal receiver to save the Profile instance whenever the User instance is saved.
+        sender (Model class): The model class that sent the signal (User in this case).
+        instance (User): The actual instance of the model being saved.
+        **kwargs: Additional keyword arguments.
+    """
     instance.profile.save()
