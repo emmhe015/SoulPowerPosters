@@ -16,26 +16,5 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     is_buyer = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
-
-@receiver(post_save, sender=User)
-def create_user_profile(sender, instance, created, **kwargs):
-    """
-    Signal receiver to create a Profile instance whenever a new User instance is created.
-        sender (Model class): The model class that sent the signal (User in this case).
-        instance (User): The actual instance of the model being saved.
-        created (bool): A boolean indicating if a new record was created.
-        **kwargs: Additional keyword arguments.
-    Side Effects:
-        Creates a corresponding Profile instance for every new User instance.
-    """
-    if created:
-        Profile.objects.create(user=instance)
-
-def save_user_profile(sender, instance, **kwargs):
-    """
-    Signal receiver to save the Profile instance whenever the User instance is saved.
-        sender (Model class): The model class that sent the signal (User in this case).
-        instance (User): The actual instance of the model being saved.
-        **kwargs: Additional keyword arguments.
-    """
-    instance.profile.save()
+    def __str__(self):
+        return self.user.username
