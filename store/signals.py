@@ -17,8 +17,8 @@ def create_user_profile(sender, instance, created, **kwargs):
     Side Effects:
         Creates a corresponding Profile instance for every new User instance.
     """
-    if created:
-        Profile.objects.create(user=instance)
+    if created and not hasattr(instance, 'profile'):
+        Profile.objects.get_or_create(user=instance)
 
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
@@ -33,4 +33,5 @@ def save_user_profile(sender, instance, **kwargs):
     Side Effects:
         Saves the corresponding Profile instance whenever the User instance is saved.
     """
-    instance.profile.save()
+    if hasattr(instance, 'profile'):
+        instance.profile.save()
