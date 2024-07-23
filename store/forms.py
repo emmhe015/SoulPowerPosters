@@ -14,7 +14,4 @@ class UserRegisterForm(UserCreationForm):
         user = super().save(commit=False)
         if commit:
             user.save()
-            profile = Profile.objects.create(user=user)
-            profile.is_buyer = True
-            profile.save()
         return user
