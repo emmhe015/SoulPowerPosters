@@ -8,6 +8,7 @@ from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 def home(request):
     return render(request, 'store/home.html')
 
+
 def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
@@ -18,6 +19,10 @@ def register(request):
     else:
         form = UserRegisterForm()
     return render(request, 'store/register.html', {'form': form})
+
+@login_required
+def dashboard(request):
+    return render(request, 'store/dashboard.html')
 
 @login_required
 def profile(request):
