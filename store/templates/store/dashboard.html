@@ -1,0 +1,7 @@
+<!-- store/templates/store/dashboard.html -->
+{% extends "store/base.html" %}
+{% block content %}
+    <h2>Dashboard</h2>
+    <p>Welcome to your dashboard, {{ user.username }}!</p>
+    <a href="{% url 'profile' %}">View Profile</a>
+{% endblock %}
