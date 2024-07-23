@@ -57,4 +57,13 @@ def add_to_cart(request, product_id):
     messages.success(request, f"{product.name} was added to your cart.")
     return redirect('product_detail', product_id=product.id)
 
+@login_required
+def view_cart(request):
+    cart, created = Cart.objects.get_or_create(user=request.user)
+    items = CartItem.objects.filter(cart=cart)
+    total_price = sum(item.get_total_item_price() for item in items)
+
+    return render(request, 'store/cart.html', {'items': items, 'total_price': total_price})
+
+
 
