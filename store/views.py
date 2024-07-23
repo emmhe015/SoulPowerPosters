@@ -6,6 +6,8 @@ from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 
 
 def home(request):
+    if request.user.is_authenticated:
+        return redirect('dashboard')
     return render(request, 'store/home.html')
 
 
