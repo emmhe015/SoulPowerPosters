@@ -1,6 +1,6 @@
 from django.urls import path
 from django.contrib.auth import views as auth_views
-from .views import register, home, profile, dashboard, Cart, view_cart, remove_from_cart, add_to_cart, product_detail
+from . import views
 
 urlpatterns = [
     path('', home, name='home'),
