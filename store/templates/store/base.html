@@ -38,22 +38,27 @@
 
 <body>
     <header class="container-fluid fixed-top"></header>
-    <nav>
-        <ul>
-            <li><a href="{% url 'home' %}">Home</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" href="{% url 'home' %}">Home</a>>Home <span class="sr-only">(current)</span></a>
             {% if user.is_authenticated %}
-            <li>
                 <form action="{% url 'logout' %}" method="post" style="display:inline;">
                     {% csrf_token %}
                     <button type="submit">Logout</button>
                 </form>
-            </li>
             {% else %}
-            <li><a href="{% url 'login' %}">Login</a></li>
-            <li><a href="{% url 'register' %}">Register</a></li>
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
+            <a class="nav-link href="{% url 'register' %}">Register</a>
             {% endif %}
-        </ul>
-    </nav>
+          </div>
+        </div>
+      </nav>
+    
     {% if messages %}
     <div class="message-container"></div>
     {% endif %}
