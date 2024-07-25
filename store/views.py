@@ -65,5 +65,13 @@ def view_cart(request):
 
     return render(request, 'store/cart.html', {'items': items, 'total_price': total_price})
 
+@login_required
+def remove_from_cart(request, item_id):
+    cart_item = get_object_or_404(CartItem, id=item_id)
+    cart_item.delete()
+
+    messages.success(request, "Item was removed from your cart.")
+    return redirect('view_cart')
+
 
 
