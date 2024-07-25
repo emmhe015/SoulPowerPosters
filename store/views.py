@@ -73,5 +73,10 @@ def remove_from_cart(request, item_id):
     messages.success(request, "Item was removed from your cart.")
     return redirect('view_cart')
 
+@login_required
+def product_detail(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+    return render(request, 'store/product_detail.html', {'product': product})
+
 
 
