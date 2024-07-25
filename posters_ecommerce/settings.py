@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-(b)j%!@7g$5n+yh6ty9vqy0frb@-(984!4$lp1*=#5*+sqvpb$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-emmhe015-soulpowerposte-3umfk7m1070.ws-eu115.gitpod.io']
+ALLOWED_HOSTS = ['8000-emmhe015-soulpowerposte-7hc55ptd2bs.ws.codeinstitute-ide.net']
 
 
 # Application definition
@@ -73,7 +73,13 @@ TEMPLATES = [
     },
 ]
 
-AUTHENTICATION_BACKENDS = ("allauth.account.auth_backends.AuthenticationBackend",)
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
 
 SITE_ID = 1
 
