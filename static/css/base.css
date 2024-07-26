@@ -1,0 +1,10 @@
+.navbar-brand {
+    font-size: 2rem; /* Adjust this value to make the text larger */
+    font-weight: bold;
+}
+.navbar-nav {
+    margin-top: 10px;
+}
+.navbar-container {
+    text-align: center;
+}
