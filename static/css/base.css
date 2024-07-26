@@ -1,6 +1,6 @@
 .navbar-brand {
     font-size: 2rem; /* Adjust this value to make the text larger */
-    font-weight: bold;
+    color: rgb(232, 167, 46);
 }
 .navbar-nav {
     margin-top: 10px;

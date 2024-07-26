@@ -7,9 +7,8 @@ from .models import Product, Cart, CartItem
 
 
 def home(request):
-    if request.user.is_authenticated:
-        return redirect('dashboard')
-    return render(request, 'store/home.html')
+    products = Product.objects.all() 
+    return render(request, 'home.html', {'products': products})
 
 
 def register(request):
