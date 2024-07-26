@@ -84,6 +84,7 @@ AUTHENTICATION_BACKENDS = (
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-emmhe015-soulpowerposte-7hc55ptd2bs.ws.codeinstitute-ide.net',
 ]
+
 SITE_ID = 1
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -148,6 +149,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
