@@ -21,7 +21,7 @@
     top: 20%; /* Justera positionen så att den ligger överlappande som du vill */
     left: 10%;
     width: 50%; /* Hälften av bredden på virgoMockup.jpg */
-    background-image: url('{{ MEDIA_URL }}gradientBackground.svg'); /* Ange rätt sökväg till bakgrundsbilden */
+    background-image: url('/media/gradientBackground.svg');; /* Ange rätt sökväg till bakgrundsbilden */
     background-size: cover; /* Se till att bakgrundsbilden täcker hela containern */
     background-position: center;
     padding: 20px; /* Justera padding efter behov */
