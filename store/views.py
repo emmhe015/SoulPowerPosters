@@ -8,7 +8,7 @@ from .models import Product, Cart, CartItem
 
 def home(request):
     products = Product.objects.all() 
-    return render(request, 'home.html', {'products': products})
+    return render(request, 'store/home.html/', {'products': products})
 
 
 def register(request):
