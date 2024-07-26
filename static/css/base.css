@@ -8,3 +8,28 @@
 .navbar-container {
     text-align: center;
 }
+
+
+/* Gör hörnen på bilden rundade */
+.rounded-corners {
+    border-radius: 15px; /* Justera radien efter behov */
+}
+
+/* Container för texten med bakgrundsbild */
+.text-background-container {
+    position: absolute;
+    top: 20%; /* Justera positionen så att den ligger överlappande som du vill */
+    left: 10%;
+    width: 50%; /* Hälften av bredden på virgoMockup.jpg */
+    background-image: url('{{ MEDIA_URL }}gradientBackground.svg'); /* Ange rätt sökväg till bakgrundsbilden */
+    background-size: cover; /* Se till att bakgrundsbilden täcker hela containern */
+    background-position: center;
+    padding: 20px; /* Justera padding efter behov */
+    border-radius: 10px; /* Valfri radie för rundade hörn på containern */
+}
+
+/* Texten i h2 kommer att ärva bakgrundsbilden från föräldern */
+.text-background-container h2 {
+    color: rgb(56, 55, 69); /* Justera textfärgen för kontrast */
+    margin: 0;
+}
