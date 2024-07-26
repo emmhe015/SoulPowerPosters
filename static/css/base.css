@@ -35,6 +35,27 @@
     margin: 40px;
 }
 
+/* Style for Collection h2 in home.html */
+
+.collection {
+    margin-left: 20px; /* Flytta sektionen inåt från vänster */
+    margin-right: 20px; /* Flytta sektionen inåt från höger */
+    padding: 0 20px; /* Lägg till padding för att skapa utrymme inom sektionen */
+}
+
+/* Alternativt för en central justering, använd 'container' eller 'container-fluid' klasser från Bootstrap */
+.container {
+    max-width: 1140px; /* Standard Bootstrap max bredd */
+    margin: 0 auto; /* Centrera container */
+}
+
+/* Ytterligare styling om så önskas */
+.collection h2 {
+    margin-bottom: 30px; /* Extra utrymme under rubriken */
+    padding-left: 15px; /* Inskjutning för rubriken */
+    color: rgb(71, 71, 76); 
+}
+
 /* style for product_list.html */
 .product-list {
     display: flex;
