@@ -19,8 +19,9 @@
 .text-background-container {
     position: absolute;
     top: 20%; /* Justera positionen så att den ligger överlappande som du vill */
-    left: 10%;
+    right: 90%;
     width: 50%; /* Hälften av bredden på virgoMockup.jpg */
+    height: 60%;
     background-image: url('/media/gradientBackground.svg');; /* Ange rätt sökväg till bakgrundsbilden */
     background-size: cover; /* Se till att bakgrundsbilden täcker hela containern */
     background-position: center;
@@ -30,6 +31,6 @@
 
 /* Texten i h2 kommer att ärva bakgrundsbilden från föräldern */
 .text-background-container h2 {
-    color: rgb(56, 55, 69); /* Justera textfärgen för kontrast */
-    margin: 0;
+    color: rgb(71, 71, 76); /* Justera textfärgen för kontrast */
+    margin: 40px;
 }
