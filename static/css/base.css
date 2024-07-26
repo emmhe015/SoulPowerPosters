@@ -31,6 +31,7 @@
 
 /* Texten i h2 kommer att ärva bakgrundsbilden från föräldern */
 .text-background-container h2 {
+    font-size: 30px;
     color: rgb(71, 71, 76); /* Justera textfärgen för kontrast */
     margin: 40px;
 }
