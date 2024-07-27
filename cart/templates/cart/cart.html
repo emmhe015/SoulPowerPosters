@@ -1,27 +1,32 @@
 <!-- store/templates/store/cart.html -->
 {% extends "base.html" %}
 {% block content %}
+
 <div class="container">
     <h2>Your Cart</h2>
     {% if cart %}
-        <ul>
-            {% for product_id, item in cart.items %}
-                <li>
-                    <img src="{{ item.image_url }}" alt="{{ item.name }}" style="width: 150px; height: auto;">
-                    {{ item.name }} - ${{ item.price }} x 
-                    <form method="post" action="{% url 'cart:update_cart' product_id %}" style="display:inline;">
-                        {% csrf_token %}
-                        <input type="number" name="quantity" value="{{ item.quantity }}" min="1" style="width: 60px;">
-                        <button type="submit" class="btn btn-sm btn-secondary">Update</button>
-                    </form>
-                    <a href="{% url 'cart:remove_from_cart' product_id %}" class="btn btn-sm btn-danger">Remove</a>
-                </li>
-            {% endfor %}
-        </ul>
-        <h3>Total Price: ${{ total_price }}</h3>
-        <a href="{% url 'products:products' %}" class="btn btn-primary">Proceed to Checkout</a>
+    <ul>
+        {% for product_id, item in cart.items %}
+        <li>
+            <img src="{{ item.image_url }}" alt="{{ item.name }}" style="width: 150px; height: auto;">
+            {{ item.name }} - ${{ item.price }} x
+            <form method="post" action="{% url 'cart:update_cart' product_id=product_id %}" style="display:inline;">
+                {% csrf_token %}
+                <input type="number" name="quantity" value="{{ item.quantity }}" min="1" style="width: 60px;">
+                <button type="submit" class="btn btn-sm btn-secondary">Update</button>
+            </form>
+            <form method="post" action="{% url 'cart:remove_from_cart' product_id=product_id %}"
+                style="display:inline;">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-sm btn-danger">Remove</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+    <h3>Total Price: ${{ total_price }}</h3>
+    <a href="{% url 'products:products' %}" class="btn btn-primary">Proceed to Checkout</a>
     {% else %}
-        <p>Your cart is empty.</p>
+    <p>Your cart is empty.</p>
     {% endif %}
 </div>
 {% endblock %}

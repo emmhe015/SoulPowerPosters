@@ -30,7 +30,7 @@ def add_to_cart(request, product_id):
    
     request.session['cart'] = cart
     
-    return redirect('view_cart')
+    return redirect('cart:view_cart')
 
 def update_cart(request, product_id):
     if request.method == 'POST':
@@ -49,4 +49,4 @@ def remove_from_cart(request, item_id):
         del cart[str(product_id)]
     request.session['cart'] = cart
     messages.success(request, "Item was removed from your cart.")
-    return redirect('view_cart')
+    return redirect('cart:view_cart')
