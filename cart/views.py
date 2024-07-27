@@ -43,7 +43,7 @@ def update_cart(request, product_id):
                 del cart[str(product_id)]
     return redirect('cart:view_cart')
 
-def remove_from_cart(request, item_id):
+def remove_from_cart(request, product_id):
     cart = request.session.get('cart', {})
     if str(product_id) in cart:
         del cart[str(product_id)]

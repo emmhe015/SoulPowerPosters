@@ -23,7 +23,7 @@
             {% else %}
             <small class="text-muted">No Rating</small>
             {% endif %}
-            <form action="{% url 'add_to_cart' product.id %}" method="POST">
+            <form action="{% url 'cart:add_to_cart' product.id %}" method="POST">
                 {% csrf_token %}
                 <button type="submit">Add to Cart</button>
             </form>
