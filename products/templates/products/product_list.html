@@ -16,6 +16,11 @@
             <div class="col text-center mt-3">
                 <h2 class="logo-font">Collection</h2>
                 <hr class="w-50 mb-1">
+                <div class="mb-3">
+                    <a href="{% url 'products:products' %}?category=zodiac_signs" class="btn btn-outline-dark">Zodiac Sign</a>
+                    <a href="{% url 'products:products' %}?category=affirmations" class="btn btn-outline-dark">Affirmation</a>
+                    <a href="{% url 'products:products' %}?category=zodiac_signs,affirmations" class="btn btn-outline-dark">All Posters</a>
+                </div>
             </div>
         </div>
         <div class="row">
