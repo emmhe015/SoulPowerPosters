@@ -1,32 +1,20 @@
 <!-- store/templates/store/cart.html -->
 {% extends "base.html" %}
 {% block content %}
+<div class="container">
     <h2>Your Cart</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>Total Price</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for item in items %}
-            <tr>
-                <td>{{ item.product.name }}</td>
-                <td>{{ item.quantity }}</td>
-                <td>${{ item.get_total_item_price }}</td>
-                <td>
-                    <form action="{% url 'remove_from_cart' item.id %}" method="POST">
-                        {% csrf_token %}
-                        <button type="submit">Remove</button>
-                    </form>
-                </td>
-            </tr>
+    {% if cart %}
+        <ul>
+            {% for product_id, item in cart.items %}
+                <li>
+                    <img src="{{ item.image_url }}" alt="{{ item.name }}" style="width: 150px; height: auto;">
+                    {{ item.name }} - ${{ item.price }} x {{ item.quantity }}
+                </li>
             {% endfor %}
-        </tbody>
-    </table>
-    <h3>Total: ${{ total_price }}</h3>
-    <a href="{% url 'checkout' %}">Proceed to Checkout</a>
+        </ul>
+        <a href="{% url 'products:products' %}" class="btn btn-primary">Proceed to Checkout</a>
+    {% else %}
+        <p>Your cart is empty.</p>
+    {% endif %}
+</div>
 {% endblock %}
