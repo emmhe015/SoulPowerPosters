@@ -13,24 +13,52 @@
     </div>
 </div>
 
-<div class="collection my-5">
-    <h2 class="my-3 text-left font-weight-light">Collection</h2>
-    <div class="row">
-        {% block product %}
-        <div class="product-list">
-            {% for product in products %}
-                <div class="product-item">
-                    <h3>{{ product.name }}</h3>
-                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid">
-                    <p>{{ product.description }}</p>
-                    <p>{{ product.review }}</p>
-                    <p>Price: ${{ product.price }}</p>
-                    <a href="{% url 'products:product_detail' product.id %}" class="btn btn-primary">View Details</a>
-                    <a href="{% url 'add_to_cart' product.id %}" class="btn btn-success">Add to cart</a>
+<div class="container">
+    <div class="collection my-5">
+        <h2 class="my-3 text-left font-weight-light">Collection</h2>
+        <div class="d-flex align-items-center">
+            <div class="arrow" id="prev-arrow">&lt;</div>
+            <div class="row w-100 overflow-hidden">
+                <div class="product-listhome d-flex">
+                    {% for product in products %}
+                        <div class="product-itemhome">
+                            <h3>{{ product.name }}</h3>
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid">
+                            <p>{{ product.description }}</p>
+                            <p>{{ product.review }}</p>
+                            <p>Price: ${{ product.price }}</p>
+                            <a href="{% url 'products:product_detail' product.id %}" class="btn btn-primary">View Details</a>
+                            <a href="{% url 'add_to_cart' product.id %}" class="btn btn-success">Add to cart</a>
+                        </div>
+                    {% endfor %}
                 </div>
-            {% endfor %}
+            </div>
+            <div class="arrow" id="next-arrow">&gt;</div>
         </div>
-        {% endblock %}
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let currentIndex = 0;
+        const itemsPerPage = 3;
+        const productList = document.querySelector('.product-list');
+        const products = document.querySelectorAll('.product-item');
+        const totalPages = Math.ceil(products.length / itemsPerPage);
+
+        document.getElementById('next-arrow').addEventListener('click', function() {
+            if (currentIndex < totalPages - 1) {
+                currentIndex++;
+                productList.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+        });
+
+        document.getElementById('prev-arrow').addEventListener('click', function() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                productList.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+        });
+    });
+</script>
 {% endblock %}

@@ -57,43 +57,48 @@
 }
 
 /* style for product_list.html */
-.product-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.product-itemhome {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+    padding: 15px;
 }
-
-.product-item {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    width: calc(33.333% - 20px); /* Tre produkter per rad med 20px mellanrum */
-    box-sizing: border-box;
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.product-item img {
-    max-width: 100%;
+.product-itemhome img {
+    width: 100%;
     height: auto;
-    border-radius: 10px;
+    max-height: 400px; /* Set a maximum height for the images */
+    object-fit: cover;
+}
+.product-listhome {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+.product-listhome.scrolled {
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+.arrow {
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 0 15px;
+    user-select: none;
 }
 
-.product-item:hover {
+.product-itemhome:hover {
     transform: scale(1.05);
 }
 
-.product-item h3 {
+.product-itemhome h3 {
     font-size: 1.25rem;
     margin-bottom: 10px;
 }
 
-.product-item p {
+.product-itemhome p {
     font-size: 1rem;
     color: #555;
 }
 
-.product-item .btn {
+.product-itemhome .btn {
     margin-top: 10px;
     display: block;
     width: 100%;
@@ -101,14 +106,47 @@
     font-size: 1rem;
 }
 
-.product-item .btn-primary {
-    background-color: #007bff;
+.product-itemhome .btn-primary {
+    background-color: #f5c762;
+    color:#333;
     border: none;
 }
 
-.product-item .btn-success {
-    background-color: #28a745;
+.product-itemhome .btn-success {
+    background-color: #bbf13e;
+    color:#333;
     border: none;
+}
+
+/* product_detail.html */
+
+.product-detail {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+.product-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+}
+.product-info {
+    padding: 40px;
+}
+.product-info h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+.product-info .price {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
 }
 
 @media (max-width: 888px) {
