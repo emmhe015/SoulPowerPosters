@@ -1,12 +1,11 @@
 .navbar-brand {
-    font-size: 2rem; /* Adjust this value to make the text larger */
+    font-size: 30px;
+    max-width: 300px;
 }
-.navbar-nav {
-    margin-top: 10px;
+.navbar-nav .nav-link {
+    padding-right: 20px; 
 }
-.navbar-container {
-    text-align: center;
-}
+
 
 
 /* Gör hörnen på bilden rundade */
