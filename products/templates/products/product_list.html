@@ -10,19 +10,32 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
+    <div class="overlay">
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
                 <h2 class="logo-font">Collection</h2>
                 <hr class="w-50 mb-1">
-                <div class="mb-3">
-                    <a href="{% url 'products:products' %}?category=zodiac_signs" class="btn btn-outline-dark">Zodiac Sign</a>
-                    <a href="{% url 'products:products' %}?category=affirmations" class="btn btn-outline-dark">Affirmation</a>
-                    <a href="{% url 'products:products' %}?category=zodiac_signs,affirmations" class="btn btn-outline-dark">All Posters</a>
+                <div class="mb-3 d-flex justify-content-center align-items-center">
+                    <a href="{% url 'products:products' %}?category=zodiac_signs" class="btn btn-outline-dark mx-1">Zodiac Sign</a>
+                    <a href="{% url 'products:products' %}?category=affirmations" class="btn btn-outline-dark mx-1">Affirmation</a>
+                    <a href="{% url 'products:products' %}?category=zodiac_signs,affirmations" class="btn btn-outline-dark mx-1">All Posters</a>
+                    <div class="dropdown mx-1">
+                        <button class="btn btn-outline-dark dropdown-toggle" type="button" id="sortDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sort by
+                        </button>
+                        <div class="dropdown-menu border-0" aria-labelledby="sortDropdown">
+                            <a href="{% url 'products:products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                            <a href="{% url 'products:products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
+                            <a href="{% url 'products:products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
+                            <a href="{% url 'products:products' %}" class="dropdown-item">Sort Posters</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
         <div class="row">
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
