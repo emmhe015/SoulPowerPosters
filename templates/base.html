@@ -103,13 +103,13 @@
             {% for message in messages %}
                 {% with message.level as level %}
                     {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
+                        {% include 'includes/toasts/toasterror.html' %}
                     {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
+                        {% include 'includes/toasts/toastwarning.html' %}
                     {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
+                        {% include 'includes/toasts/toastsuccess.html' %}
                     {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
+                        {% include 'includes/toasts/toastinfo.html' %}
                     {% endif %}
                 {% endwith %}
             {% endfor %}
