@@ -154,7 +154,9 @@
     position: fixed;
     top: 72px;
     right: 15px;
-    z-index: 99999999999;
+    z-index: 1050; /* Högt z-index för att säkerställa att den ligger över allt annat */
+    max-width: 300px; /* Begränsa bredden */
+
 }
 
 .custom-toast {
