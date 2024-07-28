@@ -1,6 +1,8 @@
 from django.apps import AppConfig
 
 
-class CartConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'cart'
+class CheckoutConfig(AppConfig):
+    name = 'checkout'
+
+    def ready(self):
+        import checkout.signals
