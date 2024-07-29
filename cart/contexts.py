@@ -23,15 +23,14 @@ def cart_contents(request):
             })
         else:
             product = get_object_or_404(Product, pk=item_id)
-            for size, quantity in item_data['items_by_size'].items():
-                total += quantity * product.price
-                product_count += quantity
-                cart_items.append({
-                    'item_id': item_id,
-                    'quantity': quantity,
-                    'product': product,
-                    'size': size,
-                })
+            quantity = item_data['quantity']
+            total += quantity * product.price
+            product_count += quantity
+            cart_items.append({
+                'item_id': item_id,
+                'quantity': quantity,
+                'product': product,
+            })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
