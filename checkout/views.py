@@ -9,7 +9,7 @@ from .forms import OrderForm
 from .models import Order, OrderLineItem
 
 from products.models import Product
-from store.models import UserProfile
+from store.models import Profile
 from store.forms import UserProfileForm
 from cart.contexts import cart_contents
 
@@ -116,7 +116,7 @@ def checkout(request):
         # the user maintains in their profile
         if request.user.is_authenticated:
             try:
-                profile = UserProfile.objects.get(user=request.user)
+                profile = Profile.objects.get(user=request.user)
                 order_form = OrderForm(initial={
                     'full_name': profile.user.get_full_name(),
                     'email': profile.user.email,
@@ -128,7 +128,7 @@ def checkout(request):
                     'street_address2': profile.default_street_address2,
                     
                 })
-            except UserProfile.DoesNotExist:
+            except Profile.DoesNotExist:
                 order_form = OrderForm()
         else:
             order_form = OrderForm()
@@ -156,7 +156,7 @@ def checkout_success(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
     if request.user.is_authenticated:
-        profile = UserProfile.objects.get(user=request.user)
+        profile = Profile.objects.get(user=request.user)
         # Attach the user's profile to the order
         order.user_profile = profile
         order.save()
@@ -172,7 +172,7 @@ def checkout_success(request, order_number):
                 'default_street_address2': order.street_address2,
                 
             }
-            user_profile_form = UserProfileForm(profile_data, instance=profile)
+            user_profile_form = ProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
