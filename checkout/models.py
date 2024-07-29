@@ -3,7 +3,7 @@ from django.db import models
 from django.db.models import Sum
 from django.conf import settings
 from products.models import Product
-from store.models import Profile
+from profiles.models import Profile
 
 
 class Order(models.Model):

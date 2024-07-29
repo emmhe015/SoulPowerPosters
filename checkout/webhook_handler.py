@@ -5,7 +5,7 @@ from django.conf import settings
 
 from .models import Order, OrderLineItem
 from products.models import Product
-from store.models import Profile
+from profiles.models import Profile
 
 import json
 import time
