@@ -46,12 +46,10 @@ def checkout(request):
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
             'phone_number': request.POST['phone_number'],
-           
             'postcode': request.POST['postcode'],
             'town_or_city': request.POST['town_or_city'],
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
-           
         }
 
         order_form = OrderForm(form_data)
@@ -72,14 +70,13 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data['items_by_size'].items():
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                product=product,
-                                quantity=quantity,
-                                product_size=size,
-                            )
-                            order_line_item.save()
+                        quantity = item_data['quantity']
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            product=product,
+                            quantity=quantity,
+                        )
+                        order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't "
@@ -87,20 +84,18 @@ def checkout(request):
                         "Please call us for assistance!")
                     )
                     order.delete()
-                    return redirect(reverse('view_cart'))
+                    return redirect(reverse('cart:view_cart'))
 
             # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success',
-                                    args=[order.order_number]))
+            return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(request, ('There was an error with your form. '
                                      'Please double check your information.'))
     else:
         cart = request.session.get('cart', {})
         if not cart:
-            messages.error(request,
-                           "There's nothing in your bag at the moment")
+            messages.error(request, "There's nothing in your bag at the moment")
             return redirect(reverse('products'))
 
         current_cart = cart_contents(request)
@@ -112,8 +107,7 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        # Attempt to prefill the form with any info
-        # the user maintains in their profile
+        # Attempt to prefill the form with any info the user maintains in their profile
         if request.user.is_authenticated:
             try:
                 profile = Profile.objects.get(user=request.user)
@@ -121,12 +115,10 @@ def checkout(request):
                     'full_name': profile.user.get_full_name(),
                     'email': profile.user.email,
                     'phone_number': profile.default_phone_number,
-                    
                     'postcode': profile.default_postcode,
                     'town_or_city': profile.default_town_or_city,
                     'street_address1': profile.default_street_address1,
                     'street_address2': profile.default_street_address2,
-                    
                 })
             except Profile.DoesNotExist:
                 order_form = OrderForm()
@@ -135,8 +127,7 @@ def checkout(request):
 
     if not stripe_public_key:
         messages.warning(request, ('Stripe public key is missing. '
-                                   'Did you forget to set it in '
-                                   'your environment?'))
+                                   'Did you forget to set it in your environment?'))
 
     template = 'checkout/checkout.html'
     context = {
@@ -172,7 +163,7 @@ def checkout_success(request, order_number):
                 'default_street_address2': order.street_address2,
                 
             }
-            user_profile_form = ProfileForm(profile_data, instance=profile)
+            user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
