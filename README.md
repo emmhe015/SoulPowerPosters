@@ -1,131 +1,181 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# SoulPower Posters
 
-Welcome Emma Henriksson,
+![Mockup of Soul Power Posters](./media/mockupSoulPowerPosters.jpg)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Welcome to Soul Power Poste! This application is designed to show posters of different zodiac signs and affirmations to remind you of who you are. 
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+## Table of Contents
 
-## Gitpod Reminders
+- [Introduction](#introduction)
+- [User Stories](#user-stories)
+- [Design Features](#design-features)
+- [Functions](#functions)
+- [Marketing](#marketing)
+- [Deployment](#deployment)
+- [Testing](#testing)
+- [Credits](#credits)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+## Introduction
+ - This application is designed to show posters as wall art of different zodiac signs and affirmations to remind you of who you are. The concept is a e-commerce store for buyers to add posters to a cart and buy the posters thru a secure checkout. The buyer has a profile to save all the user profile information. 
 
-A blue button should appear to click: _Make Public_,
+## User Stories
+ - [Go to this project on github to review the user stories](https://github.com/users/emmhe015/projects/2/views/1)
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+ ## Design Features
 
-A blue button should appear to click: _Make Public_,
+- **Homepage Gallery:** The homepage features a gallery showcasing all posters. This allows users to quickly browse through the available products and find items of interest at a glance. The gallery is visually appealing and easy to navigate, enhancing the user experience.
 
-Another blue button should appear to click: _Open Browser_.
+- **Product Page:** The product page lists all the available posters with brief descriptions and prices. Users can filter and sort the products based on various criteria such as popularity, price, and newest arrivals. This helps users to find the specific posters they are looking for more efficiently.
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- **Product Detail Page:** Each poster has a dedicated product detail page that provides comprehensive information, including a high-resolution image, detailed description, price, and available sizes. Users can also see customer reviews and ratings, which aid in making informed purchase decisions.
 
-To log into the Heroku toolbelt CLI:
+- **Shopping Cart Icon in Navbar:** A shopping cart icon is conveniently located in the navigation bar, allowing users to quickly view and manage their cart items. The icon shows the number of items in the cart, providing a constant reminder and easy access to the cart for a smoother shopping experience.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Functions
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+### Homepage
+- **Gallery Display:** Shows a gallery of all available posters, allowing users to quickly browse through the offerings.
+- **Search Bar:** Users can search for specific posters by entering keywords.
+- **Navigation Bar:** Provides links to different sections of the site, including the product page, cart, and user account.
 
-### Connecting your Mongo database
+### Product Page
+- **Product Listings:** Displays all products with thumbnail images, titles, and prices.
+- **Filter Options:** Users can filter products by categories such as zodiac signs, affirmations, and new arrivals.
+- **Sort Options:** Allows users to sort products by price, popularity, or newest arrivals.
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+### Product Detail Page
+- **High-Resolution Images:** Provides detailed images of the posters.
+- **Product Descriptions:** Includes detailed descriptions, sizes available, and price.
+- **Customer Reviews:** Displays customer ratings and reviews to help users make informed decisions.
+- **Add to Cart:** Users can add the product to their shopping cart from this page.
 
-------
+### Shopping Cart
+- **Cart Overview:** Displays all items added to the cart with their quantities and prices.
+- **Update Quantities:** Users can update the quantity of each item in the cart.
+- **Remove Items:** Allows users to remove items from the cart.
+- **Proceed to Checkout:** Users can proceed to the checkout process from the cart.
 
-## Release History
+### User Account
+- **Login/Signup:** Users can create an account or log in to an existing account.
+- **Order History:** Displays the user's past orders and their statuses.
+- **Account Details:** Allows users to update their personal information and password.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Checkout Process
+- **Billing Information:** Users enter their billing details.
+- **Shipping Information:** Users enter their shipping address.
+- **Payment Gateway:** Secure payment processing through a payment gateway.
+- **Order Confirmation:** Provides a summary of the order and confirmation message once the payment is processed.
 
-**June 18, 2024,** Add Mongo back into template
+### Admin Panel
+- **Product Management:** Admins can add, update, or remove products from the store.
+- **Order Management:** Admins can view and manage customer orders.
+- **User Management:** Admins can manage user accounts, including viewing account details and order history.
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
 
-**May 28 2024:** Fix Mongo and Links installs
 
-**April 26 2024:** Update node version to 16
+## Marketing
 
-**September 20 2023:** Update Python version to 3.9.17.
+![Facebook of Soul Power Posters](./media/facebookSoulPowerPosters.png)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+To connect with us and stay updated on the latest news and updates, follow our Facebook page:
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- [Soul Power Poster on Facebook](https://www.facebook.com/profile.php?id=61563281967004)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+We regularly post updates, feature announcements, and other important information about Soul Power Poste. Engage with us to get the most out of your experience with our application!
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- Optimize SEO meta tags. 
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Deployment
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Deploying to GitHub
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+To deploy your project to GitHub:
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+1. Initialize a new Git repository if you haven't already:
+    ```bash
+    git init
+    ```
+2. Add your files to the repository:
+    ```bash
+    git add .
+    ```
+3. Commit your changes:
+    ```bash
+    git commit -m "Initial commit"
+    ```
+4. Create a new repository on GitHub.
+5. Add the remote repository URL:
+    ```bash
+    git remote add origin https://github.com/yourusername/your-repository.git
+    ```
+6. Push your code to GitHub:
+    ```bash
+    git push -u origin master
+    ```
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Deploying to Heroku
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+To deploy your project to Heroku:
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+1. Make sure you have the Heroku CLI installed. If not, install it from [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+2. Log in to your Heroku account:
+    ```bash
+    heroku login
+    ```
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+3. Create a new Heroku application:
+    ```bash
+    heroku create your-app-name
+    ```
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+4. Add a `Procfile` to your project root directory to specify the command that should be run to start your app. For example:
+    ```bash
+    echo "web: python app.py" > Procfile
+    ```
 
-------
+5. Ensure your application has a `requirements.txt` file that lists all dependencies.
 
-## FAQ about the uptime script
+6. Commit your changes:
+    ```bash
+    git add Procfile
+    git commit -m "Added Procfile for Heroku"
+    ```
 
-**Why have you added this script?**
+7. Push your code to Heroku:
+    ```bash
+    git push heroku master
+    ```
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+8. Set up your configuration variables on Heroku if needed (e.g., database URL, secret keys):
+    ```bash
+    heroku config:set KEY=VALUE
+    ```
 
-**How will this affect me?**
+9. Open your application in the browser:
+    ```bash
+    heroku open
+    ```
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+Your application should now be live on Heroku!
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## Testing
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+The table below outlines the testing functions available in the project and their purposes:
 
-**So….?**
+| **Test Function**      | **Description**                                          |
+|------------------------|----------------------------------------------------------|
+| `test_login_function`  | Tests user login functionality and validation.           |
+| `test_signup_function` | Tests user registration and input validation.            |
+| `test_data_retrieval`  | Validates data retrieval from the database.              |
+| `test_api_endpoints`   | Checks the correctness of API responses.                 |
+| `test_ui_elements`     | Ensures that UI components render correctly.             |
+| `test_checkout`        | Ensures that checkout is successfull.                    |
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+All tests have been executed and passed successfully.
 
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+## Credits
+- Followed the walkthrough of Boutique Ado (Thru Code institute), most of the structure code is from that project. 
+- Images is from www.canva.com. 

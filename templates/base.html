@@ -7,6 +7,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-compatible" content="ie=edge">
+    <meta name="description"
+        content="Discover a wide range of posters and wall art featuring zodiac signs and affirmations at Soul Power Poste. Perfect for adding a touch of inspiration and personality to any space.">
+    <meta name="keywords" content="posters, wall art, zodiac signs, affirmations, inspirational art, home decor">
+    <meta name="author" content="Soul Power Poster">
+    <meta property="og:title" content="Soul Power Posters - Posters and Wall Art of Zodiac Signs and Affirmations">
+    <meta property="og:description"
+        content="Shop our unique collection of posters and wall art that feature beautiful designs of zodiac signs and affirmations. Perfect for home decor and gifts.">
     {% endblock %}
 
     {% block extrameta %}
@@ -51,7 +58,8 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <form method="GET" action="{% url 'products:products' %}">
                         <div class="input-group w-100">
-                            <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                            <input class="form-control border border-black rounded-0" type="text" name="q"
+                                placeholder="Search our site">
                             <div class="input-group-append">
                                 <button class="form-control btn btn-black border border-black rounded-0" type="submit">
                                     <span class="icon">
@@ -71,7 +79,7 @@
                         {% if user.is_authenticated %}
                         {% if request.user.is_superuser %}
                         <a href="{% url 'products:add_product' %}">Product Management</a>
-                       {% endif %}
+                        {% endif %}
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'profile' %}">My Account</a>
                         </li>
@@ -104,69 +112,77 @@
 
     <div class="container">
         {% if messages %}
-            <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1100;">
-                {% for message in messages %}
-                    {% if message.tags == 'error' %}
-                        <div class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
-                            <div class="d-flex">
-                                <div class="toast-body">
-                                    {{ message }}
-                                </div>
-                                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-                            </div>
-                        </div>
-                    {% elif message.tags == 'warning' %}
-                        <div class="toast align-items-center text-bg-warning border-0" role="alert" aria-live="assertive" aria-atomic="true">
-                            <div class="d-flex">
-                                <div class="toast-body">
-                                    {{ message }}
-                                </div>
-                                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-                            </div>
-                        </div>
-                    {% elif message.tags == 'success' %}
-                        <div class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
-                            <div class="d-flex">
-                                <div class="toast-body">
-                                    {{ message }}
-                                </div>
-                                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-                            </div>
-                        </div>
-                    {% else %}
-                        <div class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
-                            <div class="d-flex">
-                                <div class="toast-body">
-                                    {{ message }}
-                                </div>
-                                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-                            </div>
-                        </div>
-                    {% endif %}
-                {% endfor %}
+        <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1100;">
+            {% for message in messages %}
+            {% if message.tags == 'error' %}
+            <div class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive"
+                aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        {{ message }}
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
             </div>
+            {% elif message.tags == 'warning' %}
+            <div class="toast align-items-center text-bg-warning border-0" role="alert" aria-live="assertive"
+                aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        {{ message }}
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+            </div>
+            {% elif message.tags == 'success' %}
+            <div class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive"
+                aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        {{ message }}
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+            </div>
+            {% else %}
+            <div class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive"
+                aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        {{ message }}
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
         {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+        {% block page_header %}
+        {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+        {% block content %}
+        {% endblock %}
 
-    {% block order %}
-    {% endblock %}
+        {% block order %}
+        {% endblock %}
 
 
 
-    {% block postloadjs %}
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('.toast').toast({
-                autohide: false // Disables automatic hiding
-            }).toast('show');
-        });
-    </script>
-    {% endblock %}
+        {% block postloadjs %}
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.toast').toast({
+                    autohide: false // Disables automatic hiding
+                }).toast('show');
+            });
+        </script>
+        {% endblock %}
 </body>
 
 </html>
