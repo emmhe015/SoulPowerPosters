@@ -36,9 +36,7 @@ def register(request):
         form = UserCreationForm()
     return render(request, 'store/register.html', {'form': form})
 
-@login_required
-def dashboard(request):
-    return render(request, 'store/dashboard.html')
+
 
 
 
