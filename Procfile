@@ -1,0 +1,1 @@
+web: gunicorn posters_ecommerce.wsgi:application

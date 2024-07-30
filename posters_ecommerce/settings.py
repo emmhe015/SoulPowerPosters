@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
+import dj_database_url
 from pathlib import Path
 import environ
 
@@ -32,7 +33,7 @@ SECRET_KEY = 'django-insecure-(b)j%!@7g$5n+yh6ty9vqy0frb@-(984!4$lp1*=#5*+sqvpb$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-emmhe015-soulpowerposte-7hc55ptd2bs.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-emmhe015-soulpowerposte-7hc55ptd2bs.ws.codeinstitute-ide.net', 'soulpowerposters-862debca0bd9.herokuapp.com/']
 
 
 # Application definition
@@ -126,12 +127,18 @@ WSGI_APPLICATION = 'posters_ecommerce.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
 # Password validation
