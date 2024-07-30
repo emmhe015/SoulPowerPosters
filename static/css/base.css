@@ -20,7 +20,7 @@
     right: 90%;
     width: 50%; /* Hälften av bredden på virgoMockup.jpg */
     height: 60%;
-    background-image: url('/media/gradientBackground.svg');; /* Ange rätt sökväg till bakgrundsbilden */
+    background-image: url('soulpowerposters.s3.eu-north-1.amazonaws.com/media/gradientBackground.svg');; /* Ange rätt sökväg till bakgrundsbilden */
     background-size: cover; /* Se till att bakgrundsbilden täcker hela containern */
     background-position: center;
     padding: 20px; /* Justera padding efter behov */
