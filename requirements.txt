@@ -1,12 +1,17 @@
 asgiref==3.8.1
+boto3==1.34.150
+botocore==1.34.150
 crispy-bootstrap4==2024.1
 dj-database-url==0.5.0
 Django==5.0.7
 django-allauth==0.63.6
 django-crispy-forms==2.3
 django-environ==0.11.2
+django-storages==1.14.4
 gunicorn==22.0.0
+jmespath==1.0.1
 pillow==10.4.0
 psycopg2==2.9.9
+s3transfer==0.10.2
 sqlparse==0.5.1
 stripe==10.5.0
