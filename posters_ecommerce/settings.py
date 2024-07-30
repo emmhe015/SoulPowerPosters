@@ -10,8 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
+
 import dj_database_url
 from pathlib import Path
+
+if os.path.isfile('env.py'):
+ import env
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -123,10 +127,12 @@ WSGI_APPLICATION = 'posters_ecommerce.wsgi.application'
 
 
 if 'DATABASE_URL' in os.environ:
+    print("in live db ....")
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 else:
+    print("in local db ....")
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
