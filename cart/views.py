@@ -25,7 +25,7 @@ def add_to_cart(request, product_id):
             'name': product.name,
             'price': str(product.price),
             'quantity': 1,
-            'image_url': product.image.url if product.image else '',
+            'image_url': product.image_url if product.image_url else '',
         }
         messages.success(request, f'Added {product.name} to your cart.')
    
