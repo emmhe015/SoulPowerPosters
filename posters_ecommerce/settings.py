@@ -22,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = os.environ.get("SECRET_KEY", "qw_!ek)616_rfzl619odn=k8t#rkhru9-i$@4rf1oyqcf7nr_p")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-emmhe015-soulpowerposte-7hc55ptd2bs.ws.codeinstitute-ide.net', 'soulpowerposters-862debca0bd9.herokuapp.com']
+ALLOWED_HOSTS = ['8000-emmhe015-soulpowerposte-t0rixog7z44.ws-eu115.gitpod.io', 'soulpowerposters-862debca0bd9.herokuapp.com']
 
 
 # Application definition
@@ -102,7 +102,7 @@ AUTHENTICATION_BACKENDS = (
 )
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-emmhe015-soulpowerposte-7hc55ptd2bs.ws.codeinstitute-ide.net',
+    'https://8000-emmhe015-soulpowerposte-t0rixog7z44.ws-eu115.gitpod.io',
 ]
 
 SITE_ID = 1
