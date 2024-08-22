@@ -20,7 +20,7 @@ def cart_contents(request):
                 'product': product,
                 'name': product.name,
                 'price': product.price,
-                'image_url': product.image.url if product.image else None,
+                'image_url': product.image_url if product.image_url else None,
             })
             total += item_data * product.price
             product_count += item_data
@@ -32,7 +32,7 @@ def cart_contents(request):
                 'product': product,
                 'name': product.name,
                 'price': product.price,
-                'image_url': product.image.url if product.image else None,
+                'image_url': product.image_url if product.image_url else None,
             })
             total += quantity * product.price
             product_count += quantity
