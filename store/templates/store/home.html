@@ -23,7 +23,7 @@
                     {% for product in products %}
                         <div class="product-itemhome">
                             <h3>{{ product.name }}</h3>
-                            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid">
+                            <img src="{{ product.image_url }}" alt="{{ product.name }}" class="img-fluid">
                             <p>{{ product.description }}</p>
                             <p>{{ product.review }}</p>
                             <p>Price: ${{ product.price }}</p>
