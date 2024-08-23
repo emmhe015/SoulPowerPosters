@@ -248,14 +248,16 @@
             var $mcj = jQuery.noConflict(true);
         </script>
     </div>
+
+
     <footer style="
-        background: url('{{ MEDIA_URL }}footer.png') no-repeat center center; 
-        background-size: auto; 
-        height: 450px; /* Adjust height as needed */
-        width: 100%;
-        position: relative; /* Ensure footer stretches across the page */
-        overflow: hidden; /* Hide any overflow content if necessary */
-    ">
+    background: url('{{ MEDIA_URL }}footer.png') no-repeat center center; 
+    background-size: cover; 
+    height: 70vh; /* Responsive height using viewport units */
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+">
 </footer>
 
 </html>
