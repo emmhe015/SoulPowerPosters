@@ -1,0 +1,182 @@
+.navbar-brand {
+    font-size: 30px;
+    max-width: 300px;
+}
+.navbar-nav .nav-link {
+    padding-right: 20px; 
+}
+
+
+
+/* Gör hörnen på bilden rundade */
+.rounded-corners {
+    border-radius: 15px; /* Justera radien efter behov */
+}
+
+/* text with background in home.html */
+.text-background-container {
+    position: absolute;
+    top: 20%; /* Justera positionen så att den ligger överlappande som du vill */
+    right: 90%;
+    width: 50%; /* Hälften av bredden på virgoMockup.jpg */
+    height: 60%;
+    background-image: url('https://soulpowerposters.s3.eu-north-1.amazonaws.com/media/gradientBackground.svg');/* Ange rätt sökväg till bakgrundsbilden */
+    background-size: cover; /* Se till att bakgrundsbilden täcker hela containern */
+    background-position: center;
+    padding: 20px; /* Justera padding efter behov */
+    border-radius: 10px; /* Valfri radie för rundade hörn på containern */
+}
+
+/* Texten i h2 kommer att ärva bakgrundsbilden från föräldern */
+.text-background-container h2 {
+    font-size: 30px;
+    color: rgb(71, 71, 76); /* Justera textfärgen för kontrast */
+    margin: 40px;
+}
+
+/* Style for Collection h2 in home.html */
+
+.collection {
+    margin-left: 20px; /* Flytta sektionen inåt från vänster */
+    margin-right: 20px; /* Flytta sektionen inåt från höger */
+    padding: 0 20px; /* Lägg till padding för att skapa utrymme inom sektionen */
+}
+
+/* Alternativt för en central justering, använd 'container' eller 'container-fluid' klasser från Bootstrap */
+.container {
+    max-width: 1140px; /* Standard Bootstrap max bredd */
+    margin: 0 auto; /* Centrera container */
+}
+
+/* Ytterligare styling om så önskas */
+.collection h2 {
+    margin-bottom: 30px; /* Extra utrymme under rubriken */
+    padding-left: 15px; /* Inskjutning för rubriken */
+    color: rgb(71, 71, 76); 
+}
+
+/* style for product_list.html */
+.product-itemhome {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+    padding: 15px;
+}
+.product-itemhome img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Set a maximum height for the images */
+    object-fit: cover;
+}
+.product-listhome {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+.product-listhome.scrolled {
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+.arrow {
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 0 15px;
+    user-select: none;
+}
+
+.product-itemhome:hover {
+    transform: scale(1.05);
+}
+
+.product-itemhome h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.product-itemhome p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.product-itemhome .btn {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+}
+
+.product-itemhome .btn-primary {
+    background-color: #62f5d5;
+    color:#333;
+    border: none;
+}
+
+.product-itemhome .btn-success {
+    background-color: #bbf13e;
+    color:#333;
+    border: none;
+}
+
+/* product_detail.html */
+
+.product-detail {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+.product-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+}
+.product-info {
+    padding: 40px;
+}
+.product-info h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+.product-info .price {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 1050; /* Högt z-index för att säkerställa att den ligger över allt annat */
+    max-width: 300px; /* Begränsa bredden */
+
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+@media (max-width: 888px) {
+    .text-background-container {
+        position: static; /* Gör positioneringen statisk */
+        height: 40%;
+        width: 100%; /* Full bredd för att fylla containern */
+        margin-top: 20px; /* Lägger till ett mellanrum ovanför texten */
+    }
+
+    .text-background-container h2 {
+        text-align: center; /* Centrerar texten */
+        padding-top: 50px;
+    }
+}
