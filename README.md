@@ -165,16 +165,30 @@ Your application should now be live on Heroku!
 
 The table below outlines the testing functions available in the project and their purposes:
 
-| **Test Function**      | **Description**                                          |
-|------------------------|----------------------------------------------------------|
-| `test_login_function`  | Tests user login functionality and validation.           |
-| `test_signup_function` | Tests user registration and input validation.            |
-| `test_data_retrieval`  | Validates data retrieval from the database.              |
-| `test_api_endpoints`   | Checks the correctness of API responses.                 |
-| `test_ui_elements`     | Ensures that UI components render correctly.             |
-| `test_checkout`        | Ensures that checkout is successfull.                    |
+| **Test Function**             | **Description**                                                                 |
+|-------------------------------|---------------------------------------------------------------------------------|
+| `test_gallery_display`        | Verifies that the gallery displays all available posters correctly.              |
+| `test_search_bar`             | Tests the search functionality, ensuring accurate results based on keywords.     |
+| `test_navigation_bar`         | Ensures all navigation links are working and lead to the correct sections.       |
+| `test_product_listings`       | Validates the display of products with correct images, titles, and prices.       |
+| `test_filter_options`         | Ensures that products are filtered correctly by categories such as zodiac signs. |
+| `test_sort_options`           | Checks that products can be sorted by price, popularity, or newest arrivals.     |
+| `test_product_detail_page`    | Verifies the correct display of high-resolution images, descriptions, and reviews.|
+| `test_add_to_cart`            | Ensures that products can be added to the shopping cart from the product detail page. |
+| `test_cart_overview`          | Validates that the cart displays all items with correct quantities and prices.    |
+| `test_update_quantities`      | Tests the functionality to update item quantities within the cart.                |
+| `test_remove_items`           | Ensures that users can remove items from the cart.                                |
+| `test_proceed_to_checkout`    | Verifies that users can successfully proceed to the checkout process.             |
+| `test_login_signup`           | Tests the user account creation, login, and validation processes.                |
+| `test_order_history`          | Ensures that users can view their past orders and their statuses.                |
+| `test_account_details`        | Validates that users can update their personal information and passwords.        |
+| `test_checkout_process`       | Ensures the entire checkout process, including billing, shipping, and payment, works correctly. |
+| `test_admin_product_management` | Tests admin capabilities to add, update, or remove products.                  |
+| `test_admin_order_management`   | Verifies that admins can view and manage customer orders.                    |
+| `test_admin_user_management`    | Ensures that admins can manage user accounts and view account details.       |
 
 All tests have been executed and passed successfully.
+
 
 ## Credits
 - Followed the walkthrough of Boutique Ado (Thru Code institute), most of the structure code is from that project. 
