@@ -1,1 +1,67 @@
-[{"model": "products.product", "pk": 175, "fields": {"category": 10, "sku": null, "name": "Virgo", "description": "A Poster to remind you of who you are, beautiful Virgo.", "price": "149.00", "rating": "5.00", "image_url": null, "image": "virgoBlack_igjfgPs.jpg"}}, {"model": "products.product", "pk": 176, "fields": {"category": 10, "sku": null, "name": "Libra", "description": "A Poster to remind you of who you are, beautiful Libra.", "price": "149.00", "rating": "5.00", "image_url": null, "image": "libraBlack_WQGA7xU.jpg"}}, {"model": "products.product", "pk": 177, "fields": {"category": 10, "sku": null, "name": "Aquarius", "description": "A Poster to remind you of who you are, beautiful Aquarius.", "price": "149.00", "rating": "5.00", "image_url": null, "image": "aquariusBlack_IILoLim.jpg"}}]
+[
+{
+    "model": "products.product",
+    "pk": 175,
+    "fields": {
+        "category": 10,
+        "sku": null,
+        "name": "Virgo",
+        "description": "A poster to remind you of who you are, beautiful Virgo.",
+        "price": "149.00",
+        "rating": "10.00",
+        "image_url": "https://soulpowerposters.s3.eu-north-1.amazonaws.com/media/virgo.jpg"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 176,
+    "fields": {
+        "category": 10,
+        "sku": null,
+        "name": "Aries",
+        "description": "A poster to remind you of who you are, beautiful Aries.",
+        "price": "149.00",
+        "rating": "10.00",
+        "image_url": "https://soulpowerposters.s3.eu-north-1.amazonaws.com/media/aries.jpg"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 177,
+    "fields": {
+        "category": 10,
+        "sku": null,
+        "name": "Gemini",
+        "description": "A poster to remind you of who you are, beautiful Gemini.",
+        "price": "149.00",
+        "rating": "10.00",
+        "image_url": "https://soulpowerposters.s3.eu-north-1.amazonaws.com/media/gemini.jpg"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 178,
+    "fields": {
+        "category": 11,
+        "sku": null,
+        "name": "Lucky girl affirmation",
+        "description": "A reminder of what lucky girl you are, everyday.",
+        "price": "149.00",
+        "rating": "10.00",
+        "image_url": "https://soulpowerposters.s3.eu-north-1.amazonaws.com/media/affirmationLuckygirl.jpg"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 179,
+    "fields": {
+        "category": 11,
+        "sku": null,
+        "name": "Everything works out",
+        "description": "Just a reminder that everything works out in the end.",
+        "price": "149.00",
+        "rating": "5.00",
+        "image_url": "https://soulpowerposters.s3.eu-north-1.amazonaws.com/media/affirmationEverything.jpg"
+    }
+}
+]
