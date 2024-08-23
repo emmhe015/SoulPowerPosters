@@ -8,8 +8,89 @@
 
 
 <url>
-  <loc>https://emmhe015-soulpowerposte-7hc55ptd2bs.ws.codeinstitute-ide.net/</loc>
-  <lastmod>2024-07-12T11:50:09+00:00</lastmod>
+  <loc>https://soulpowerposters-862debca0bd9.herokuapp.com/</loc>
+  <lastmod>2024-08-23T08:45:50+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://soulpowerposters-862debca0bd9.herokuapp.com/products/products/</loc>
+  <lastmod>2024-08-23T08:45:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://soulpowerposters-862debca0bd9.herokuapp.com/login/</loc>
+  <lastmod>2024-08-23T08:45:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://soulpowerposters-862debca0bd9.herokuapp.com/cart/cart/</loc>
+  <lastmod>2024-08-23T08:45:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://soulpowerposters-862debca0bd9.herokuapp.com/products/products/175/</loc>
+  <lastmod>2024-08-23T08:45:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://soulpowerposters-862debca0bd9.herokuapp.com/products/products/176/</loc>
+  <lastmod>2024-08-23T08:45:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://soulpowerposters-862debca0bd9.herokuapp.com/products/products/177/</loc>
+  <lastmod>2024-08-23T08:45:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://soulpowerposters-862debca0bd9.herokuapp.com/products/products/178/</loc>
+  <lastmod>2024-08-23T08:45:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://soulpowerposters-862debca0bd9.herokuapp.com/products/products/179/</loc>
+  <lastmod>2024-08-23T08:45:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://soulpowerposters-862debca0bd9.herokuapp.com/products/?category=zodiac_signs</loc>
+  <lastmod>2024-08-23T08:45:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://soulpowerposters-862debca0bd9.herokuapp.com/products/?category=affirmations</loc>
+  <lastmod>2024-08-23T08:45:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://soulpowerposters-862debca0bd9.herokuapp.com/products/?category=zodiac_signs,affirmations</loc>
+  <lastmod>2024-08-23T08:45:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://soulpowerposters-862debca0bd9.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
+  <lastmod>2024-08-23T08:45:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://soulpowerposters-862debca0bd9.herokuapp.com/products/?sort=rating&amp;direction=desc</loc>
+  <lastmod>2024-08-23T08:45:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://soulpowerposters-862debca0bd9.herokuapp.com/products/?sort=category&amp;direction=asc</loc>
+  <lastmod>2024-08-23T08:45:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://soulpowerposters-862debca0bd9.herokuapp.com/products/</loc>
+  <lastmod>2024-08-23T08:45:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://soulpowerposters-862debca0bd9.herokuapp.com/register/</loc>
+  <lastmod>2024-08-23T08:45:50+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
